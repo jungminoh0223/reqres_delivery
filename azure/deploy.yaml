@@ -1,19 +1,21 @@
-apiVersion : apps/v1
-kind: Deployment
+apiVersion : "apps/v1"
+kind: "Deployment"
 metadata:
-  name: delivery
+  name: "delivery"
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: delivery
+      app: "delivery"
+  replicas: 1
   template:
     metadata:
       labels:
-        app: delivery
+        app: "delivery"
     spec:
       containers:
-        - name: delivery
-          image: user20.azurecr.io/delivery:latest
+        - 
+          name: "delivery"
+          image: "user20.azurecr.io/delivery:latest"
           ports:
-            - containerPort: 8080
+            - 
+              containerPort: 8080
